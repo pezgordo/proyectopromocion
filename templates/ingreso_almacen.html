@@ -1,0 +1,18 @@
+<doctype html="">
+    <title>Ingreso de Productos a Almacen</title>
+    <h2>Ingreso de Productos almacen</h2>
+
+    <a href="{{ url_for('.ver_almacen') }}"> Ver Almacen </a>
+
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post">
+        <dl>
+            {{ render_field(form.Producto) }}
+            {{ render_field(form.Puntos) }}
+            {{ render_field(form.Categoria) }}
+            {{ render_field(form.Stock) }}
+            
+        </dl>
+        <p><input type="submit" value="Ingresar">
+    </p></form>
+    </doctype>
